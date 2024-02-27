@@ -1,0 +1,35 @@
+'''
+Use conditional branching to determine if a user provided username and password matches ones saved to the variables USR_NAME and USR_PSWRD.
+
+If the username is invalid, print "Incorrect username". 
+If the password in invalid, print "Incorrect password". 
+If both are invalid, print "Both username and password invalid!"
+
+If both username and password are valid, print the phrase "Welcome Back, AdaWada88!"
+
+Try changing the values on lines 10 and 11 to different values to see if the correct values print out
+'''
+
+# Variables to hold the user provided username and password
+username = 'AdaWada88'
+password = 'AdaLove1234'
+
+# DO NOT CHANGE
+USR_NAME = 'AdaWada88'
+USR_PSWRD = 'AdaLove1234'
+
+# AND conditional must go first to check if both are invalid
+if username != USR_NAME and password != USR_PSWRD:
+  print("Both username and password invalid!")
+
+# Check whether username OR password is invalid
+# if username is invalid print invalid username
+elif username != USR_NAME:
+    print("Incorrect username")
+# if password invalid print invalid passowrd
+elif password != USR_PSWRD:
+    print("Incorrect password")
+
+# Making it here means both username and password were valid!
+else:
+  print(f"Welcome Back, {username}!")
