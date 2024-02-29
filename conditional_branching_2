@@ -1,0 +1,32 @@
+'''
+Is it hairwash day? Reference the flow chart below to determine if it is hairwash day.
+
+If it is hairwash day, print "It's hairwash day". If it's not hair wash day yet, print "It's not hair wash day".
+
+Has it been more than 3 days since your last hairwash?
+            /                      \
+           /                        \
+         Yes                        No
+         /                            \
+        /                              \
+"It's hair wash day"               Did you workout?
+                                        /     \
+                                       /       \
+                                     Yes       No
+                                     /           \
+                                    /             \
+                    "It's hair wash day"   "It's not hair wash day"
+''' 
+
+days_since_last_wash = 3
+worked_out_today = False
+
+# Write your code here
+
+if days_since_last_wash > 3:
+    print("It's hair wash day")
+else:
+    if worked_out_today:
+        print("It's hair wash day")
+    else:
+        print("It's not hair wash day")
