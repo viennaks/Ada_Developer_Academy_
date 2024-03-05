@@ -1,0 +1,46 @@
+def rps(player1, player2):
+    """
+    How can we update our version 2 solution to handle invalid inputs? 
+    
+    If a user passes in an invalid input for player1, then
+    print "Please pass in a valid input for player1"
+    If a user passes in an invalid input for player2, then 
+    print "Please pass in a valid input for player2"
+    
+    input: player1 and player2 -> 'rock','paper', 'scissors'
+    output: "Player 1 wins!", "Player 2 Wins!", "It's a tie!"
+    """
+
+    player1 = player1.lower()
+    player2 = player2.lower()
+    
+    if player1 != 'rock' and player1 != 'paper' and player1 != 'scissors':
+        print("Please pass in a valid input for player1")
+        return
+    elif player2 != 'rock' and player2 != 'paper' and player2 != 'scissors':
+        print("Please pass in a valid input for player2")
+        return
+    
+    # tie
+    if player1 == player2:
+        print("It's a tie!")
+    # player 1 = rock
+    elif player1 == 'rock':
+        if player2 == 'paper':
+            print("Player 2 wins!")
+    elif player2 == 'scissors':
+        print("Player 1 wins!")
+    # player 1 = paper
+    elif player1 == 'paper':
+        if player2 == 'rock':
+            print("Player 1 wins!")
+    elif player2 == 'scissors':
+        print("Player 2 wins!")
+    # player 1 = scissors
+    elif player1 == 'scissors':
+        if player2 == 'rock':
+            print("Player 2 wins!")
+    elif player2 == 'paper':
+        print("Player 1 wins!")
+    
+rps('dog', 'ROCK')
