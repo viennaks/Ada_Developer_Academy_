@@ -1,0 +1,34 @@
+'''
+At your bakery you charge $25 for a dozen cupcakes and $2.75 for a single cupcake. 
+
+Write a function that uses mathematical operators to calculate the total cost for an order of cupcakes.
+
+Your function will need to take 3 arguments: num_cupcakes_ordered, dozen_cupcakes_price and single_cupcake_price.
+
+The function should print the total cost.
+
+Don't forget to invoke your function to test it out.
+'''
+
+def calculate_cupcake_totals(num_cupcakes_ordered, dozen_cupcakes_price, single_cupcake_price):
+    dozen = 12
+
+    # Use truncating division // to find how many dozens are in 17
+    number_of_dozens = num_cupcakes_ordered // dozen
+    # Use modulo % to find how many remaining cupcakes are in 17
+    num_single_cupcakes = num_cupcakes_ordered % dozen
+
+    # dont forget to use print statements to debug and see what your statements evaluate to
+
+    # Use multiplication to calculate the cost for dozens of cupcakes and single cupcakes
+    cost_for_doz = number_of_dozens * dozen_cupcakes_price
+    cost_for_singles = single_cupcake_price * num_single_cupcakes
+
+    total_cost = cost_for_doz + cost_for_singles
+
+    # Print order total 
+    print(f"The total cost for {num_cupcakes_ordered} is: ${total_cost}.")
+
+calculate_cupcake_totals(17, 25, 2.75) # we pulled the quantity of cupcakes, the price per dozen and individual price outside of the function and added them as parameters
+
+# see original solution here: https://replit.com/@adadev/Mathematical-Operators-Solution
